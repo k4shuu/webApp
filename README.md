@@ -109,6 +109,20 @@ para crear el primer administrador. El archivo `backend/.env` no debe versionars
 El favicon fuente está en `frontend/public/icon.png`; Vite lo publica como
 `/icon.png` y lo copia a `frontend/dist/icon.png` al compilar.
 
+### Frontend en Vercel
+
+Si el frontend se despliega en Vercel, elegí `frontend` como **Root Directory**.
+Usá `Vite`, `npm run build`, `dist` y `npm install`. Definí en las variables de
+entorno de Vercel:
+
+```env
+VITE_API_URL=https://api.tudominio.tech/api
+```
+
+Ese backend debe estar publicado y permitir el dominio de Vercel en `FRONTEND_URL`.
+`frontend/vercel.json` mantiene funcionando las rutas `/admin/` y
+`/propiedades/...` al recargar la página.
+
 ## Verificación
 
 ```bash

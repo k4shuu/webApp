@@ -23,9 +23,8 @@ import {
 } from "lucide-react";
 import "./styles.css";
 import AdminSection from "./admin.jsx";
-import { API_PREFIX, BRAND_NAME, CONTACT_EMAIL, SITE_NAME } from "../../shared/constants.js";
-
-const API_URL = API_PREFIX;
+import { BRAND_NAME, CONTACT_EMAIL, SITE_NAME } from "../../shared/constants.js";
+import { API_URL, assetUrl } from "./api.js";
 
 const fallbackProperties = [
   {
@@ -138,7 +137,7 @@ function formatPrice(property) {
 }
 
 function propertyImages(property) {
-  return property.imageUrls?.length ? property.imageUrls : [property.imageUrl];
+  return (property.imageUrls?.length ? property.imageUrls : [property.imageUrl]).map(assetUrl);
 }
 
 function propertyPath(property) {

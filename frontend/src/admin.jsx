@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Check, Moon, Pencil, Plus, Sun, Trash2, X } from "lucide-react";
-import { API_PREFIX, MAX_PROPERTY_IMAGES } from "../../shared/constants.js";
-
-const API_URL = API_PREFIX;
+import { MAX_PROPERTY_IMAGES } from "../../shared/constants.js";
+import { API_URL, assetUrl } from "./api.js";
 const emptyProperty = {
   title: "",
   description: "",
@@ -291,7 +290,7 @@ export default function AdminSection({ onExit, darkMode, setDarkMode }) {
               <div className="image-selection-list">
                 {form.imageUrls.map((image, index) => (
                   <div className="selected-file-row" key={`existing-${image}-${index}`}>
-                    <img src={image} alt="" />
+                    <img src={assetUrl(image)} alt="" />
                     <span title={image}>Foto existente {index + 1}</span>
                     <button
                       type="button"
