@@ -1,0 +1,11 @@
+export const SITE_NAME = "Gomez Ramos Propiedades";
+export const BRAND_NAME = "Gomez Ramos";
+export const CONTACT_EMAIL = "hola@gomezramos.com";
+export const API_PREFIX = "/api";
+export const MAX_PROPERTY_IMAGES = 10;
+export const MAX_IMAGE_SIZE_BYTES = 10 * 1024 * 1024;
+export const PASSWORD_MIN_LENGTH = 8;
+export const JWT_EXPIRES_IN = "8h";
+export const INQUIRY_ENCRYPTION_PREFIX = "v1:";
+export const DEFAULT_PORT = 8080;
+export const DEV_FRONTEND_URL = "http://localhost:5173";
